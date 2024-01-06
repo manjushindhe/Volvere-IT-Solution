@@ -1,0 +1,16 @@
+import GPUtil
+
+def get_gpu_info():
+    try:
+        gpu_info = GPUtil.getGPUs()[0].name
+        return gpu_info
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+# Run the function and display GPU information
+gpu_model = get_gpu_info()
+if gpu_model:
+    print("GPU Model:", gpu_model)
+else:
+    print("No GPU found or an error occurred.")
