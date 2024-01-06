@@ -1,0 +1,8 @@
+import platform
+
+def get_windows_version():
+    return platform.version()
+
+# Run the function and display Windows version
+windows_version = get_windows_version()
+print("Windows Version:", windows_version)
