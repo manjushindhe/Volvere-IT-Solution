@@ -1,0 +1,15 @@
+import psutil
+
+def get_cpu_info():
+    logical_cores = psutil.cpu_count(logical=True)
+    physical_cores = psutil.cpu_count(logical=False)
+
+    return logical_cores, physical_cores
+
+# Run the function and display CPU information
+logical_cores, physical_cores = get_cpu_info()
+print("Number of Logical Cores:", logical_cores)
+print("Number of Physical Cores:", physical_cores)
+
+Number of Logical Cores: 4
+Number of Physical Cores: 2
