@@ -1,0 +1,16 @@
+import screeninfo
+
+def get_screen_resolution():
+    screen_info = screeninfo.get_monitors()
+    resolutions = [(monitor.width, monitor.height) for monitor in screen_info]
+    return resolutions
+
+# Run the function and display the results
+screen_resolutions = get_screen_resolution()
+
+print("Screen Resolutions:")
+for i, resolution in enumerate(screen_resolutions, start=1):
+    print(f"Monitor {i}: {resolution[0]}x{resolution[1]} pixels")
+
+Screen Resolutions:
+Monitor 1: 1366x768 pixels
