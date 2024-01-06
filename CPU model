@@ -1,0 +1,11 @@
+import platform
+
+def get_cpu_model():
+    return platform.processor()
+
+# Run the function and display the CPU model
+cpu_model = get_cpu_model()
+print("CPU Model:", cpu_model)
+
+
+CPU Model: Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
