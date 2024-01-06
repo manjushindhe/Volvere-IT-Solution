@@ -1,0 +1,16 @@
+import getmac
+
+def get_mac_address(interface="Wi-Fi"):
+    try:
+        mac_address = getmac.get_mac_address(interface=interface)
+        return mac_address
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+# Run the function and display MAC address
+mac_address = get_mac_address()
+if mac_address:
+    print(f"{mac_address} is the MAC address of the {getmac.get_interface()} interface.")
+else:
+    print("Failed to retrieve MAC address.")
