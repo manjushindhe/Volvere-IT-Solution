@@ -1,0 +1,13 @@
+import psutil
+
+def get_ram_size():
+    ram_info = psutil.virtual_memory().total / (1024 ** 3)  # Convert to GB
+    return ram_info
+
+# Run the function and display RAM size
+ram_size = get_ram_size()
+print("RAM Size (GB):", ram_size)
+
+
+
+RAM Size (GB): 7.937786102294922
